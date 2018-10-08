@@ -18,6 +18,3 @@ $(function() {
         }
     });
 });
-$("icon").hover(function(){
-    $("p").toggleClass(".icon-p");
-});

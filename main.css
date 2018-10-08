@@ -69,6 +69,14 @@ body{
     border-bottom: 3px solid green;
     text-decoration: none;
 }
+@media screen and (min-width: 768px){
+    .modal-dialog {
+        left:0% !important;
+    }
+    }
+element.style{
+    padding-right:0 !important;
+}
 /*--- End of Nav ---*/
 
 /*Footer section*/
