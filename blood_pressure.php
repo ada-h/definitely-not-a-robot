@@ -8,6 +8,22 @@
     <script src="main.js"></script>
 </head>
 <body>
+<h1> Registration Form </h1>
+ <form method="post" action="connect.php">
+      Username: <input type="text" name="username"><br/><br/>
+      Password: <input type="password"name="password"><br/><br/>
+      <input type="submit" value="Submit">
+  </form>
+<br/>
+
+<h1> Sign-in Form </h1>
+<form method="post" action="signIn.php">
+    Username: <input type="text" name="inputUsername"><br/><br/>
+    Password: <input type="password"name="inputPassword"><br/><br/>
+    <input type="submit" value="Submit">
+</form>
+
+<br/>
     <h1> What does your blood Pressure Mean? </h1>
     <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
         Diastolic: <input type="number" name="diastolic">
@@ -96,6 +112,6 @@
             }
         }
     ?>
-  
+ 
 </body>
 </html>
