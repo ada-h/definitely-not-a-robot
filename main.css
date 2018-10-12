@@ -572,3 +572,52 @@ i{
 }
 
 /* End of header */
+
+/*Become a Seller Page */
+.seller{
+    zoom:1;
+    list-style: none;
+    list-style-image: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: 0 0;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+.designer{
+    background-image: url("images/designer.jpg");
+}
+.artist{
+    background-image: url("images/artist.jpg");
+}
+.writer{
+    background-image: url("images/writer.jpg");
+}
+.video{
+    background-image: url("images/video.jpg");
+}
+.musician{
+    background-image: url("images/musician.jpg");
+}
+.seller_image{
+    background-position: 0 0;
+    width: 23.5%;
+    height: 275px;
+    margin: 0 2% 2% 0;
+    position: relative;
+    cursor: pointer;
+    float: left;
+    -webkit-transition: background-size 1s;
+    transition: background-size 1s;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: list-item;
+    text-align: -webkit-match-parent;
+}

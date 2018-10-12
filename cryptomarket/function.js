@@ -29,6 +29,6 @@ function validateForm(){
         alert ("Refresh Captcha")
     }
     else {
-        alert ("Incorrect Name or Password")
+        alert ("Incorrect Name or email")
     }
 }
