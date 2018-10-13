@@ -22,7 +22,6 @@
     Password: <input type="password"name="inputPassword"><br/><br/>
     <input type="submit" value="Submit">
 </form>
-
 <br/>
     <h1> What does your blood Pressure Mean? </h1>
     <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
@@ -112,6 +111,39 @@
             }
         }
     ?>
- 
+    <br/>
+    <br/>
+    <?php
+    //Initiating a search function
+     $host ="localhost";
+     $dbusername ="root";
+     $dbpassword = "";
+     $dbname="forever";
+        //Create connection
+     $conn = mysqli_connect($host, $dbusername, $dbpassword, $dbname);
+     if (mysqli_connect_errno()){
+     die(" Failed to connect to Database: ". mysqli_connect_error() ." (" .mysqli_connect_errno() . ")"
+     );
+        }
+        if (isset($_POST['search_input'])){
+            $search_input= $_POST['search_input'];
+            if(!empty ($search_input)){
+               $query="SELECT 'Username' FROM dashboard WHERE 'Username' LIKE '%$search_input%' ";
+               $query_run = mysqli_query($conn, $query);
+
+               if (mysqli_num_rows($query_run)>= 1){
+                   
+                echo 'Found';
+               }
+               else{
+                   echo 'No results Found';
+               }
+            }
+        }
+    ?>
+    <form action="blood_pressure.php" method="POST">
+        <input type="text" name="search_input" >
+        <input type="submit" value="Go">
+    </form>
 </body>
 </html>
