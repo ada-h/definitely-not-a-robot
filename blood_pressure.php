@@ -128,16 +128,22 @@
         if (isset($_POST['search_input'])){
             $search_input= $_POST['search_input'];
             if(!empty ($search_input)){
-               $query="SELECT 'Username' FROM dashboard WHERE 'Username' LIKE '%$search_input%' ";
+                if (strlen($search_input)>=4){
+               $query="SELECT Username FROM dashboard WHERE Username LIKE '%$search_input%' ";
                $query_run = mysqli_query($conn, $query);
-
-               if (mysqli_num_rows($query_run)>= 1){
-                   
-                echo 'Found';
+                $query_num_rows = mysqli_num_rows($query_run);
+               if ($query_num_rows>= 1){
+                   echo $query_num_rows.'results found'.'<br/>';
+                while ($query_row= mysqli_fetch_assoc($query_run)){
+                    echo $query_row['Username'].'<br/>';
+                }
                }
                else{
                    echo 'No results Found';
                }
+                }else {echo 'Please be more specific';
+                
+                }
             }
         }
     ?>
@@ -145,5 +151,10 @@
         <input type="text" name="search_input" >
         <input type="submit" value="Go">
     </form>
+    <?php 
+    //Using a different page to process but still getting everything returned on this page?
+    
+
+    ?>
 </body>
 </html>

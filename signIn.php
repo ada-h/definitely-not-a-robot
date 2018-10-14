@@ -13,15 +13,15 @@
   //Perform Database Query
   $username =$_POST['inputUsername'];
   $password =$_POST['inputPassword'];
-  $query = "SELECT 'Username', 'Password' FROM dashboard WHERE 'Username' =  '$username' AND 'Password' = '$password' ";
+  $query = "SELECT Username, Password FROM dashboard WHERE Username =  '$username' AND Password = '$password' ";
 
   $result= mysqli_query($conn, $query);
 
-  if ($result) {
-      echo "Query Owk";
-  } else{
-     echo "Something went wrong"; 
-     //i used this to make sure i had the right query
-    die("Database query failed. " .mysqli_error($conn));
+    if (mysqli_num_rows($result)== 0){
+                   
+        echo 'Invalid Username or Password';
+  } else if(mysqli_num_rows($result)== 1) {
+     echo "Welcome!"; 
+     //i used this to make sure i had the right query- die("Database query failed. " .mysqli_error($conn));
   }
 ?>
