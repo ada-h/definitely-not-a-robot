@@ -1,10 +1,10 @@
 $(function() {
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 400){
-            $('nav').addClass('scroll')    
+        if ($(this).scrollTop()> 400){
+            $('show').addClass('scroll')    
         }
-        if ($(this).scrollTop()< 400){
-            $('nav').removeClass('scroll')
+        if ($(this).scrollTop() < 400){
+            $('show').removeClass('scroll')
         }
     });
 });

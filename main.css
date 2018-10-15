@@ -83,17 +83,14 @@ body{
 element.style{
     padding-right:0 !important;
 }
-table > td {
-    padding: 5px !important;
-    text-align: left !important;
-}
-table > tr{
-    margin-bottom: 10px !important;
+.dropdown-toggle > .dropdown-menu > li{
+    width:25%;
+    float: left;
 }
 /*--- End of Nav ---*/
 
 /*Footer section*/
-.row{
+footer> .row{
     margin-left:25px !important;
 }
 h4 {
@@ -386,7 +383,7 @@ h3{
     border-radius: 3px;
 }
 .headings{
-    margin-bottom: 50px;
+    margin-bottom: 10px;
     margin-top: 50px;
 }
 /* End of Gallery section */
@@ -606,9 +603,69 @@ i{
 .musician{
     background-image: url("images/musician.jpg");
 }
+.voice_over{
+    background-image: url("images/voiceover.jpg");
+}
+.web-analyst{
+    background-image: url("images/analyst.jpg");
+}
 .seller_image{
     background-position: 0 0;
-    width: 23.5%;
+    width: 20%;
+    height: 85px;
+    margin: 0 2% 2% 0;
+    position: relative;
+    cursor: pointer;
+    float: left;
+    -webkit-transition: background-size 1s;
+    transition: background-size 1s;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+.freelance_seller{
+    font-weight:bold;
+}
+.btn-xs{
+    font-size:10px !important;
+}
+.how_it_works{
+    margin-left: 10px !important;
+}
+.buyer{
+    zoom:1;
+    list-style: none;
+    list-style-image: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: 0 0;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+.buyer1{
+    background-image: url("images/buyer_stories1.jpg");   
+}
+.buyer2{
+    background-image: url("images/buyer_stories2.jpg");  
+}
+.buyer3{
+    background-image: url("images/buyer_stories3.jpg");  
+}
+.buyer4{
+    background-image: url("images/buyer_stories4.jpg");   
+}
+.buyer_image{
+    background-position: 0 0;
+    background-size: cover;
+    width: 100%;
     height: 275px;
     margin: 0 2% 2% 0;
     position: relative;
@@ -620,4 +677,49 @@ i{
     background-size: 100%;
     display: list-item;
     text-align: -webkit-match-parent;
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 57% 100%, 50% 92%, 43% 100%, 0 100%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 57% 100%, 50% 92%, 43% 100%, 0 100%);
+}
+.quotes{
+    font: italic 18px/140% Georgia,'Times New Roman',serif;
+    text-align: left;
+    display: block;
+    padding: 0 25px;
+    margin-top: 30px;
+}
+cite {
+    font: normal 14px/140% "Helvetica Neue",Helvetica,Arial,sans-serif;
+    display: block;
+    padding-top: 25px;
+}
+.buyer_text{
+    background-color: #f7f7f7;
+    padding-bottom: 30px;
+    box-sizing: border-box;
+}
+.question:before{
+    content: "\f107";
+    color: #0e0e0f;
+    font-size: 15px;
+    font-family: FontAwesome;
+    float: right;
+    transition: transform .3s,-webkit-transform .3s;
+}
+.question{
+    display: block;
+    padding: 20px 15px;
+    cursor: pointer;
+    color: #0e0e0f;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-weight: 700;
+}
+.panel{
+    margin: 0;
+    padding: 0 20px 0 0;
+    transition: max-height .3s,padding-top .3s;
+}
+.usual_questions > li{
+    list-style: none;
 }

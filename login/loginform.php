@@ -20,7 +20,6 @@ if (isset($_POST['inputUsername']) && isset($_POST['inputPassword'])){
              echo $user_id = mysqli_result($result, 0 , 'id');
            }
        }
-
     }
     else {
         echo "Please input your username and password";
