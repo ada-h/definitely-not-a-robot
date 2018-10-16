@@ -1,3 +1,4 @@
+
 <?php
     // Using the include fuction for the connect.php
         $host ="localhost";
@@ -9,4 +10,8 @@
     if (mysqli_connect_errno()){
         die(" Failed to connect to Database: ". mysqli_connect_error() ." (" .mysqli_connect_errno() . ")"
         );
+    }else {
+        
     }
+    
+?>

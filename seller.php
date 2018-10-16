@@ -1,7 +1,7 @@
 <?php
 include("nav.html")
 ?>
-<section class="freelance_community container">
+<section class="freelance_community container hidden-xs hidden-sm">
     <div class="row">
     <div class=" headings text-center">
         <p class="freelance_seller"> Join Our Growing Freelance Community</p>
@@ -35,6 +35,59 @@ include("nav.html")
 
     </ul>
     </div>
+</section>
+<section class = "phone_carousel hidden-md hidden-lg">
+    <div class="container">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+             <!-- Indicators -->
+            <ol class="carousel-indicators">
+             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+             <li data-target="#myCarousel" data-slide-to="1"></li>
+             <li data-target="#myCarousel" data-slide-to="2"></li>
+             <li data-target="#myCarousel" data-slide-to="3"></li>
+             <li data-target="#myCarousel" data-slide-to="4"></li>
+             <li data-target="#myCarousel" data-slide-to="5"></li>
+             <li data-target="#myCarousel" data-slide-to="6"></li>
+            </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="images/designer.jpg" alt="Designer" class="img-responsive">
+      </div>
+
+      <div class="item">
+        <img src="images/artist.jpg" alt="Artist" class="img-responsive">
+      </div>
+    
+      <div class="item">
+        <img src="images/writer.jpg" alt="Writer" class="img-responsive">
+      </div>
+
+      <div class="item">
+        <img src="images/video.jpg" alt="Videographer" class="img-responsive">
+      </div>
+
+     <div class="item">
+        <img src="images/musician.jpg" alt="Musician" class="img-responsive">
+      </div>
+
+     <div class="item">
+        <img src="images/voiceover.jpg" alt="Videographer" class="img-responsive">
+      </div>
+
+      <div class="item">
+        <img src="images/analyst.jpg" alt="Analyst" class="img-responsive">
+      </div>
+    </div>
+    <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+  </a>
+  </div>
+</div>
+
 </section>
 <section>
 <div class="container">

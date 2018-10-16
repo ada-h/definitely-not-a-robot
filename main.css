@@ -581,7 +581,6 @@ i{
     outline: 0;
     font-size: 100%;
     vertical-align: baseline;
-    background: 0 0;
     margin-block-start: 1em;
     margin-block-end: 1em;
     margin-inline-start: 0px;
@@ -638,7 +637,6 @@ i{
     list-style: none;
     list-style-image: none;
     margin: 0;
-    padding: 0;
     border: 0;
     outline: 0;
     font-size: 100%;
@@ -649,6 +647,7 @@ i{
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     padding-inline-start: 40px;
+    padding: 2px;
 }
 .buyer1{
     background-image: url("images/buyer_stories1.jpg");   

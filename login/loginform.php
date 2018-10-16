@@ -9,6 +9,9 @@
 if (isset($_POST['inputUsername']) && isset($_POST['inputPassword'])){
     $username = $_POST['inputUsername'];
     $password = $_POST['inputPassword'];
+
+    //sqli injection preventions
+    $username = mysqli_real_escape_string($conn, $username);
     if (!empty($username) && !empty($password)){
        $query = "SELECT id FROM dashboard WHERE Username = '$username' && Password = '$password' " ;
        $result = mysqli_query($conn, $query);
@@ -17,7 +20,10 @@ if (isset($_POST['inputUsername']) && isset($_POST['inputPassword'])){
            if ($query_num_rows == 0){
                echo "Wrong Username or Password";
            }else if ($query_num_rows == 1){
-             echo $user_id = mysqli_result($result, 0 , 'id');
+             while($userId = mysqli_fetch_row($result)){
+                $_SESSION['userId']= $userId;
+                header('Location:index.php');
+             }
            }
        }
     }
