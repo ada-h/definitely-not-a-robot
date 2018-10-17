@@ -2,6 +2,7 @@
         //learning how to connect to a database
        $username = filter_input(INPUT_POST,'username');
        $password = filter_input(INPUT_POST,'password');
+       $password_hash = md5($password);
        if(!empty($username)){
         if (!empty($password)){
             $host ="localhost";
@@ -18,7 +19,7 @@
         }
         else{
             $sql = "INSERT INTO dashboard (Username, Password)
-            values ('$username','$password')";
+            values ('$username','$password_hash')";
             if ($conn->query($sql)){
                 echo "New record is inserted successfully";
             }

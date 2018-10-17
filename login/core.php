@@ -13,5 +13,20 @@ function loggedIn(){
     }else{
         return false;
     }
-}
+};
+//Remembering a User
+function getAuthenticatedUser(){
+    global $conn;
+    $query = "SELECT username FROM dashboard WHERE `id` =  ".$_SESSION['userId'] ;
+    //    die($query);
+       $result = mysqli_query($conn, $query);
+      
+       if ($result){
+           $query_num_rows = mysqli_num_rows($result);
+           
+             while($user = mysqli_fetch_array($result)){
+                return $user['username'];
+             }
+           }
+       }
 ?>

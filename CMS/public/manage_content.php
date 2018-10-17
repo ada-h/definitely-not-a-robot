@@ -40,8 +40,4 @@ require_once("../includes/functions.php")
             </div>
     </div>
 </body>
-<?php
-//close database connection
-mysqli_close($conn);
-?>
 </html>
