@@ -10,5 +10,4 @@ require_once('connect.php');
         echo getAuthenticatedUser(). " is logged in ". "<a href=logout.php> Log Out </a><br>";
     } else include('loginform.php');
 
-    ob_end_flush();
 ?>

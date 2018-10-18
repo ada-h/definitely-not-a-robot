@@ -2,7 +2,6 @@
         //learning how to connect to a database
        $username = filter_input(INPUT_POST,'username');
        $password = filter_input(INPUT_POST,'password');
-       $password_hash = md5($password);
        if(!empty($username)){
         if (!empty($password)){
             $host ="localhost";
@@ -15,19 +14,32 @@
 
         if (mysqli_connect_error()){
             die('Connect Error ('.mysqli_connect_errno() . ')'
-            .mysqli_connect_error());
+            .mysqli_connect_error()); 
+            //checking to see if username already exists on the database 
+        }if(!empty($username)){
+            $check_existing_usernames = "SELECT * FROM dashboard where Username='$username'";
+            $result = mysqli_query($conn, $check_existing_usernames);
+            $query_num_rows = mysqli_num_rows($result);
+                if($query_num_rows >= 1){
+                    echo "Username already exists!";
+                }
         }
-        else{
+        //Insering a username if it's not there yet
+        else if ($query_num_rows < 1){
             $sql = "INSERT INTO dashboard (Username, Password)
-            values ('$username','$password_hash')";
-            if ($conn->query($sql)){
-                echo "New record is inserted successfully";
+            values ('$username','$password')";
+            $result = mysqli_query($conn, $sql);
+            if($result){
+            echo "New record is inserted successfully";
+            }else{
+                echo "Something went wrong";
             }
-            else{
+
+        }else{
                 echo "Error".$sql."<br/>". $conn->error;
             }
             $conn->close();
-        }
+       // }
         }
         else {
             echo "Password should not be empty";

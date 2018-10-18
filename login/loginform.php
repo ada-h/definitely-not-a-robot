@@ -33,4 +33,6 @@ if (isset($_POST['inputUsername']) && isset($_POST['inputPassword'])){
         echo "Please input your username and password";
     }
 }
+//close connection
+mysqli_close($conn);
 ?>

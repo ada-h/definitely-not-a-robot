@@ -23,6 +23,8 @@
     <input type="submit" value="Submit">
 </form>
 <br/>
+<br/>
+
     <h1> What does your blood Pressure Mean? </h1>
     <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
         Diastolic: <input type="number" name="diastolic">

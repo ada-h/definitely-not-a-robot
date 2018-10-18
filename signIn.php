@@ -24,4 +24,5 @@
      echo "Welcome!"; 
      //i used this to make sure i had the right query- die("Database query failed. " .mysqli_error($conn));
   }
+  $conn->close();
 ?>
