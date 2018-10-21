@@ -1,3 +1,23 @@
+$(function() {
+    $(window).scroll(function () {
+        if ($(this).scrollTop()> 400){
+            $('show').addClass('scroll')    
+        }
+        if ($(this).scrollTop() < 400){
+            $('show').removeClass('scroll')
+        }
+    });
+});
+$(function() {
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 400){
+            $('.scroll').addClass('show')    
+        }
+        if ($(this).scrollTop()< 400){
+            $('.scroll').removeClass('show')
+        }
+    });
+});
 
 //Recap Js 
 function song(song){
@@ -52,7 +72,7 @@ todo.forEach(function(i) {
  }
  //Simple Facebook page
      
-   /*  var database = [ 
+     var database = [ 
         {
             username: "Bobby",
             password: "famished",
@@ -97,43 +117,3 @@ todo.forEach(function(i) {
     var passwordPrompt = prompt("What is your password");
     
    signIn(userNameprompt, passwordPrompt)
-   */
-    
-   var button = document.getElementById("enter");
-   var userInput = document.getElementById("userInput");
-   var ul= document.querySelector("ul");
-
-   button.addEventListener("click", function (){
-      var li= document.createElement("li");
-      if (userInput.value.length > 0){
-        li.appendChild(document.createTextNode(userInput.value));
-      ul.appendChild(li);
-      userInput.value="";
-      } else{
-          alert("Please enter a food you hate!")
-      }
-      
-   })
-   //creating a background generator
-   var text = document.getElementsByTagName("h3");
-   var color1 = document.querySelector(".color1");
-   var color2 = document.querySelector(".color2");
-   var background = document.getElementById("gradient");
-
-   // DRY
-   function colorGenerator() {
-    background.style.background = "linear-gradient(to right, " + color1.value + ", " + color2.value + ")";
-    text.textContent = background.style.background + ";";
-   }
-
-   color1.addEventListener("input", colorGenerator)
-
-   color2.addEventListener("input", colorGenerator)
-
-//teneary operators
-function isUservalid(bool){
-    return bool;
-}
-
-var answer= isUservalid(true) ? "Proceed":"Go back whence you came!";
-
