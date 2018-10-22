@@ -137,3 +137,68 @@ function isUservalid(bool){
 
 var answer= isUservalid(true) ? "Proceed":"Go back whence you came!";
 
+const first = () =>{
+    const greet = 'Hi';
+    const second = () =>{
+        alert(greet);
+    }
+    return second;
+} 
+const newFunc = first();
+newFunc();
+
+//Advanced arrays
+
+const array = [1,2,3,10,5];
+const double = [];
+const newArray = array.forEach((num) => {
+   double.push(num * 2);
+})
+console.log(double);
+//map 
+const mapArray = array.map((num) => {
+    return num * 3;
+})
+console.log(mapArray) // choose map over foreach anytime you want to look through a array
+
+//filter
+const filterArray = array.filter((num)=>{
+    return num > 5;
+})
+console.log(filterArray);
+
+//reduce
+const reduceArray = array.reduce((accumulator, num) =>{
+    return accumulator + num
+}, 4)
+console.log(reduceArray)
+
+const dragons = ['Tim', 'Johnathan', 'Sandy', 'Sarah'];
+dragons.includes("John")// includes can be used with arrays,they check if something is a part of something. basically.
+
+// #2) Check if this array includes any name that has "John" inside of it. If it does, return that
+// name or names in an array.
+const dragons = ['Tim', 'Johnathan', 'Sandy', 'Sarah'];
+dragons.filter(name => name.includes('John')) 
+
+//Create a function that calulates the power of 100 of a number entered as a parameter
+const tothe100 = (a) => {
+    return a **100
+}
+tothe100(10000);
+
+// #1) Line up the Turtle and the Rabbit at the start line:
+const startLine = '     ||<- Start line';
+let turtle = '🐢';
+let rabbit = '🐇';
+
+// it should look like this:
+'     ||<- Start line'
+'       🐢'
+'       🐇'
+turtle= turtle.padStart(8);
+rabbit = rabbit.padStart(8);
+
+console.log(startLine);
+console.log(turtle);
+console.log(rabbit);

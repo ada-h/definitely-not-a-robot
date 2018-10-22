@@ -9,4 +9,3 @@ app.get('/profile', (req,res) => {
     res.send('Getting Profile');
 });
 app.listen(8080);
-
